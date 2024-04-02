@@ -20,4 +20,26 @@ def caesar_cipher(string, shift_factor)
     end
     return result
 end
-puts caesar_cipher("What a stRinG",5)
+
+puts "Enter your string"
+str = gets.chomp
+puts "Enter the shift"
+shift = gets.chomp.to_i
+puts caesar_cipher(str,shift)
+
+# better answer
+#     def translate(message, shift, result = '')
+#       message.each_char do |char|
+#         base = char.ord < 91 ? 65 : 97
+#         # Modifies Lowercase & Uppercase
+#         if char.ord.between?(65, 90) || char.ord.between?(97, 122)
+#           rotation = (((char.ord - base) + shift) % 26) + base
+#           result += rotation.chr
+#         # Keeps spaces & punctuation
+#         else
+#           result += char
+#         end
+#       end
+#       result
+#     end
+#   end
