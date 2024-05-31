@@ -7,15 +7,15 @@ correct_word = false
 until correct_word
     random_number = Random.rand(0 .. 9894)
     word = dictionary[random_number].chomp
-    puts word
+    # puts word
     if word.length.between?(5,12)
         correct_word = true
         # word = dictionary[random_number]
     end
 end
 
-puts
-puts word
+# puts
+# puts word
 fp0.close
 
 word_split = word.split("")
